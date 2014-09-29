@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7DB0C45719D9DB50009FB27C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB0C45619D9DB50009FB27C /* AppDelegate.swift */; };
+		7DB0C45919D9DB50009FB27C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB0C45819D9DB50009FB27C /* ViewController.swift */; };
+		7DB0C45C19D9DB50009FB27C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB0C45A19D9DB50009FB27C /* Main.storyboard */; };
+		7DB0C45E19D9DB50009FB27C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DB0C45D19D9DB50009FB27C /* Images.xcassets */; };
+		7DB0C46119D9DB50009FB27C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DB0C45F19D9DB50009FB27C /* LaunchScreen.xib */; };
+		7DB0C46D19D9DB50009FB27C /* tweezerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB0C46C19D9DB50009FB27C /* tweezerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7DB0C46719D9DB50009FB27C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DB0C44919D9DB50009FB27C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DB0C45019D9DB50009FB27C;
+			remoteInfo = tweezer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7DB0C45119D9DB50009FB27C /* tweezer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tweezer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DB0C45519D9DB50009FB27C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DB0C45619D9DB50009FB27C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7DB0C45819D9DB50009FB27C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7DB0C45B19D9DB50009FB27C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7DB0C45D19D9DB50009FB27C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7DB0C46019D9DB50009FB27C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		7DB0C46619D9DB50009FB27C /* tweezerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tweezerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DB0C46B19D9DB50009FB27C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DB0C46C19D9DB50009FB27C /* tweezerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tweezerTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7DB0C44E19D9DB50009FB27C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DB0C46319D9DB50009FB27C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7DB0C44819D9DB50009FB27C = {
+			isa = PBXGroup;
+			children = (
+				7DB0C45319D9DB50009FB27C /* tweezer */,
+				7DB0C46919D9DB50009FB27C /* tweezerTests */,
+				7DB0C45219D9DB50009FB27C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7DB0C45219D9DB50009FB27C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DB0C45119D9DB50009FB27C /* tweezer.app */,
+				7DB0C46619D9DB50009FB27C /* tweezerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB0C45319D9DB50009FB27C /* tweezer */ = {
+			isa = PBXGroup;
+			children = (
+				7DB0C45619D9DB50009FB27C /* AppDelegate.swift */,
+				7DB0C45819D9DB50009FB27C /* ViewController.swift */,
+				7DB0C45A19D9DB50009FB27C /* Main.storyboard */,
+				7DB0C45D19D9DB50009FB27C /* Images.xcassets */,
+				7DB0C45F19D9DB50009FB27C /* LaunchScreen.xib */,
+				7DB0C45419D9DB50009FB27C /* Supporting Files */,
+			);
+			path = tweezer;
+			sourceTree = "<group>";
+		};
+		7DB0C45419D9DB50009FB27C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7DB0C45519D9DB50009FB27C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7DB0C46919D9DB50009FB27C /* tweezerTests */ = {
+			isa = PBXGroup;
+			children = (
+				7DB0C46C19D9DB50009FB27C /* tweezerTests.swift */,
+				7DB0C46A19D9DB50009FB27C /* Supporting Files */,
+			);
+			path = tweezerTests;
+			sourceTree = "<group>";
+		};
+		7DB0C46A19D9DB50009FB27C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7DB0C46B19D9DB50009FB27C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7DB0C45019D9DB50009FB27C /* tweezer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DB0C47019D9DB50009FB27C /* Build configuration list for PBXNativeTarget "tweezer" */;
+			buildPhases = (
+				7DB0C44D19D9DB50009FB27C /* Sources */,
+				7DB0C44E19D9DB50009FB27C /* Frameworks */,
+				7DB0C44F19D9DB50009FB27C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tweezer;
+			productName = tweezer;
+			productReference = 7DB0C45119D9DB50009FB27C /* tweezer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7DB0C46519D9DB50009FB27C /* tweezerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DB0C47319D9DB50009FB27C /* Build configuration list for PBXNativeTarget "tweezerTests" */;
+			buildPhases = (
+				7DB0C46219D9DB50009FB27C /* Sources */,
+				7DB0C46319D9DB50009FB27C /* Frameworks */,
+				7DB0C46419D9DB50009FB27C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DB0C46819D9DB50009FB27C /* PBXTargetDependency */,
+			);
+			name = tweezerTests;
+			productName = tweezerTests;
+			productReference = 7DB0C46619D9DB50009FB27C /* tweezerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7DB0C44919D9DB50009FB27C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Sam Mueller";
+				TargetAttributes = {
+					7DB0C45019D9DB50009FB27C = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					7DB0C46519D9DB50009FB27C = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 7DB0C45019D9DB50009FB27C;
+					};
+				};
+			};
+			buildConfigurationList = 7DB0C44C19D9DB50009FB27C /* Build configuration list for PBXProject "tweezer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7DB0C44819D9DB50009FB27C;
+			productRefGroup = 7DB0C45219D9DB50009FB27C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7DB0C45019D9DB50009FB27C /* tweezer */,
+				7DB0C46519D9DB50009FB27C /* tweezerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7DB0C44F19D9DB50009FB27C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DB0C45C19D9DB50009FB27C /* Main.storyboard in Resources */,
+				7DB0C46119D9DB50009FB27C /* LaunchScreen.xib in Resources */,
+				7DB0C45E19D9DB50009FB27C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DB0C46419D9DB50009FB27C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7DB0C44D19D9DB50009FB27C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DB0C45919D9DB50009FB27C /* ViewController.swift in Sources */,
+				7DB0C45719D9DB50009FB27C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DB0C46219D9DB50009FB27C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DB0C46D19D9DB50009FB27C /* tweezerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7DB0C46819D9DB50009FB27C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DB0C45019D9DB50009FB27C /* tweezer */;
+			targetProxy = 7DB0C46719D9DB50009FB27C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7DB0C45A19D9DB50009FB27C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DB0C45B19D9DB50009FB27C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7DB0C45F19D9DB50009FB27C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DB0C46019D9DB50009FB27C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7DB0C46E19D9DB50009FB27C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7DB0C46F19D9DB50009FB27C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7DB0C47119D9DB50009FB27C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = tweezer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7DB0C47219D9DB50009FB27C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = tweezer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7DB0C47419D9DB50009FB27C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = tweezerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tweezer.app/tweezer";
+			};
+			name = Debug;
+		};
+		7DB0C47519D9DB50009FB27C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = tweezerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tweezer.app/tweezer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7DB0C44C19D9DB50009FB27C /* Build configuration list for PBXProject "tweezer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DB0C46E19D9DB50009FB27C /* Debug */,
+				7DB0C46F19D9DB50009FB27C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DB0C47019D9DB50009FB27C /* Build configuration list for PBXNativeTarget "tweezer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DB0C47119D9DB50009FB27C /* Debug */,
+				7DB0C47219D9DB50009FB27C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7DB0C47319D9DB50009FB27C /* Build configuration list for PBXNativeTarget "tweezerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DB0C47419D9DB50009FB27C /* Debug */,
+				7DB0C47519D9DB50009FB27C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7DB0C44919D9DB50009FB27C /* Project object */;
+}
