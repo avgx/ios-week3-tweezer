@@ -13,6 +13,8 @@
 		7DB0C45E19D9DB50009FB27C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DB0C45D19D9DB50009FB27C /* Images.xcassets */; };
 		7DB0C46119D9DB50009FB27C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DB0C45F19D9DB50009FB27C /* LaunchScreen.xib */; };
 		7DB0C46D19D9DB50009FB27C /* tweezerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB0C46C19D9DB50009FB27C /* tweezerTests.swift */; };
+		7DB0C47D19D9DE33009FB27C /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB0C47C19D9DE33009FB27C /* TwitterClient.swift */; };
+		A9722D89770C4E42ACA0A1C7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B39C859351254739B207A8AA /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,10 @@
 		7DB0C46619D9DB50009FB27C /* tweezerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tweezerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DB0C46B19D9DB50009FB27C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DB0C46C19D9DB50009FB27C /* tweezerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tweezerTests.swift; sourceTree = "<group>"; };
+		7DB0C47619D9DD3C009FB27C /* tweezer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tweezer-Bridging-Header.h"; sourceTree = "<group>"; };
+		7DB0C47C19D9DE33009FB27C /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterClient.swift; path = API/TwitterClient.swift; sourceTree = "<group>"; };
+		9A4789773078427EBB71387B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		B39C859351254739B207A8AA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9722D89770C4E42ACA0A1C7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +69,8 @@
 				7DB0C45319D9DB50009FB27C /* tweezer */,
 				7DB0C46919D9DB50009FB27C /* tweezerTests */,
 				7DB0C45219D9DB50009FB27C /* Products */,
+				9A4789773078427EBB71387B /* Pods.xcconfig */,
+				E65CC41250A940E3BB845984 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +86,14 @@
 		7DB0C45319D9DB50009FB27C /* tweezer */ = {
 			isa = PBXGroup;
 			children = (
+				7DB0C47919D9DDE6009FB27C /* API */,
 				7DB0C45619D9DB50009FB27C /* AppDelegate.swift */,
 				7DB0C45819D9DB50009FB27C /* ViewController.swift */,
 				7DB0C45A19D9DB50009FB27C /* Main.storyboard */,
 				7DB0C45D19D9DB50009FB27C /* Images.xcassets */,
 				7DB0C45F19D9DB50009FB27C /* LaunchScreen.xib */,
 				7DB0C45419D9DB50009FB27C /* Supporting Files */,
+				7DB0C47619D9DD3C009FB27C /* tweezer-Bridging-Header.h */,
 			);
 			path = tweezer;
 			sourceTree = "<group>";
@@ -112,6 +123,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7DB0C47919D9DDE6009FB27C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				7DB0C47C19D9DE33009FB27C /* TwitterClient.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		E65CC41250A940E3BB845984 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B39C859351254739B207A8AA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7DB0C47019D9DB50009FB27C /* Build configuration list for PBXNativeTarget "tweezer" */;
 			buildPhases = (
+				04541E30F0914FF59B44A0F1 /* Check Pods Manifest.lock */,
 				7DB0C44D19D9DB50009FB27C /* Sources */,
 				7DB0C44E19D9DB50009FB27C /* Frameworks */,
 				7DB0C44F19D9DB50009FB27C /* Resources */,
+				95C0E1319A004D4EA0CFA2DA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,12 +236,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04541E30F0914FF59B44A0F1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		95C0E1319A004D4EA0CFA2DA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7DB0C44D19D9DB50009FB27C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7DB0C45919D9DB50009FB27C /* ViewController.swift in Sources */,
+				7DB0C47D19D9DE33009FB27C /* TwitterClient.swift in Sources */,
 				7DB0C45719D9DB50009FB27C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,21 +399,28 @@
 		};
 		7DB0C47119D9DB50009FB27C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A4789773078427EBB71387B /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = tweezer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tweezer/tweezer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		7DB0C47219D9DB50009FB27C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A4789773078427EBB71387B /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = tweezer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tweezer/tweezer-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -407,6 +477,7 @@
 				7DB0C47219D9DB50009FB27C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DB0C47319D9DB50009FB27C /* Build configuration list for PBXNativeTarget "tweezerTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +486,7 @@
 				7DB0C47519D9DB50009FB27C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
