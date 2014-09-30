@@ -11,21 +11,29 @@ import UIKit
 class TimelineViewController: UITableViewController {
     
     var tweets = [Tweet]()
+    var refreshThrControl: UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.rowHeight = UITableViewAutomaticDimension
-        
+        refreshData(self)
+        setupRefresh()
+    }
+    
+    func setupRefresh() {
+        refreshThrControl = UIRefreshControl()
+        refreshThrControl.attributedTitle = NSAttributedString(string: "Pull to refersh")
+        refreshThrControl.addTarget(self, action: "refreshData:", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(refreshThrControl)
+    }
+    
+    func refreshData(sender: AnyObject) {
         TwitterClient.sharedInstance.getTimeline({ (data: [Tweet]) in
             self.tweets += data
             self.tableView.reloadData()
+            self.refreshThrControl.endRefreshing()
         })
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
