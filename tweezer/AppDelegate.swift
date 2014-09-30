@@ -12,10 +12,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var storyboard = UIStoryboard(name: "Main", bundle: nil)
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let loggedIn = TwitterClient.sharedInstance.isLoggedIn
+        let storyboardId = loggedIn ? "TabBarController" : "LoginViewController"
+        window?.rootViewController = storyboard.instantiateViewControllerWithIdentifier(storyboardId) as? UIViewController
         return true
     }
 
@@ -45,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //fetch access token
         TwitterClient.sharedInstance.setAuthToken(url.query!)
-        
+        self.window?.rootViewController?.performSegueWithIdentifier("SegueToTabBarController", sender: nil)
         return true
     }
 

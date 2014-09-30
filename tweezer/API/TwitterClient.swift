@@ -14,6 +14,15 @@ private let host = "https://api.twitter.com"
 
 class TwitterClient : BDBOAuth1SessionManager {
     
+    private let defaults = NSUserDefaults.standardUserDefaults()
+    
+    var isLoggedIn: Bool {
+        get {
+            println("isLoggedIn: checking for accessToken \(requestSerializer.accessToken)")
+            return requestSerializer.accessToken != nil
+        }
+    }
+    
     func login(completion: (url: String) -> Void) {
         fetchRequestTokenWithPath("oauth/request_token", method: "GET", callbackURL: NSURL(string: "tweezer://oauth"), scope: nil, success: { (requestToken:BDBOAuthToken!) -> Void in
             println("got token")
