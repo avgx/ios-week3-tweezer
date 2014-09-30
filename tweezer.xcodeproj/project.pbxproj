@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2222470019DA8102006E77B5 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222246FF19DA8102006E77B5 /* ComposeViewController.swift */; };
+		2222470319DA91D0006E77B5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222470219DA91D0006E77B5 /* User.swift */; };
+		2222470519DA91EC006E77B5 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222470419DA91EC006E77B5 /* Tweet.swift */; };
+		2222470719DA985D006E77B5 /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222470619DA985D006E77B5 /* TimelineCell.swift */; };
 		22E4AD6319DA680A00BF7A62 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4AD6219DA680A00BF7A62 /* TimelineViewController.swift */; };
 		7DB0C45719D9DB50009FB27C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB0C45619D9DB50009FB27C /* AppDelegate.swift */; };
 		7DB0C45C19D9DB50009FB27C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB0C45A19D9DB50009FB27C /* Main.storyboard */; };
@@ -31,6 +34,9 @@
 
 /* Begin PBXFileReference section */
 		222246FF19DA8102006E77B5 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ComposeViewController.swift; path = UI/Compose/ComposeViewController.swift; sourceTree = "<group>"; };
+		2222470219DA91D0006E77B5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
+		2222470419DA91EC006E77B5 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tweet.swift; path = Model/Tweet.swift; sourceTree = "<group>"; };
+		2222470619DA985D006E77B5 /* TimelineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimelineCell.swift; path = UI/Timeline/TimelineCell.swift; sourceTree = "<group>"; };
 		22E4AD6219DA680A00BF7A62 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimelineViewController.swift; path = UI/Timeline/TimelineViewController.swift; sourceTree = "<group>"; };
 		7DB0C45119D9DB50009FB27C /* tweezer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tweezer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DB0C45519D9DB50009FB27C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,10 +81,20 @@
 			name = Compose;
 			sourceTree = "<group>";
 		};
+		2222470119DA91B7006E77B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2222470219DA91D0006E77B5 /* User.swift */,
+				2222470419DA91EC006E77B5 /* Tweet.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		22E4AD6119DA67CA00BF7A62 /* Timeline */ = {
 			isa = PBXGroup;
 			children = (
 				22E4AD6219DA680A00BF7A62 /* TimelineViewController.swift */,
+				2222470619DA985D006E77B5 /* TimelineCell.swift */,
 			);
 			name = Timeline;
 			sourceTree = "<group>";
@@ -106,6 +122,7 @@
 		7DB0C45319D9DB50009FB27C /* tweezer */ = {
 			isa = PBXGroup;
 			children = (
+				2222470119DA91B7006E77B5 /* Model */,
 				7DB0C47E19DA3654009FB27C /* UI */,
 				7DB0C47919D9DDE6009FB27C /* API */,
 				7DB0C45619D9DB50009FB27C /* AppDelegate.swift */,
@@ -314,6 +331,9 @@
 			files = (
 				2222470019DA8102006E77B5 /* ComposeViewController.swift in Sources */,
 				7DB0C48119DA36B6009FB27C /* LoginViewController.swift in Sources */,
+				2222470319DA91D0006E77B5 /* User.swift in Sources */,
+				2222470519DA91EC006E77B5 /* Tweet.swift in Sources */,
+				2222470719DA985D006E77B5 /* TimelineCell.swift in Sources */,
 				22E4AD6319DA680A00BF7A62 /* TimelineViewController.swift in Sources */,
 				7DB0C47D19D9DE33009FB27C /* TwitterClient.swift in Sources */,
 				7DB0C45719D9DB50009FB27C /* AppDelegate.swift in Sources */,

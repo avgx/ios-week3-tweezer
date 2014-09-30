@@ -48,6 +48,14 @@ class TwitterClient : BDBOAuth1SessionManager {
             print("error - get current user: \(error)")
         }
     }
+    
+    func getTimeline(completion: (data: [Tweet]) -> Void) {
+        GET("1.1/statuses/home_timeline.json", parameters: nil, success: { (session: NSURLSessionDataTask!, response: AnyObject!) -> Void in
+            completion(data:Tweet.tweetsFromArray(response as [NSDictionary]))
+        }) { (session: NSURLSessionDataTask!, error: NSError!) -> Void in
+            print("error - get home timeline: \(error)")
+        }
+    }
 
     class var sharedInstance: TwitterClient {
         struct Static {
