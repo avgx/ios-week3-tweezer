@@ -7,3 +7,44 @@
 //
 
 import Foundation
+
+private let key = "Zf5uTxkdQjWFHnnUMNsDmVZO3"
+private let secret = "e9XB52PvFXCVWVlyA7y7cP4MnDNsRoZNHPUmUoosyi2F9reKC4"
+private let host = "https://api.twitter.com"
+
+class TwitterClient : BDBOAuth1SessionManager {
+    
+    func login(completion: (url: String) -> Void) {
+        fetchRequestTokenWithPath("oauth/request_token", method: "GET", callbackURL: NSURL(string: "tweezer://oauth"), scope: nil, success: { (requestToken:BDBOAuthToken!) -> Void in
+            println("got token")
+            completion(url: "\(host)/oauth/authorize?oauth_token=\(requestToken.token)")
+        }) { (error: NSError!) -> Void in
+            print("error - login: \(error)")
+        }
+    }
+    
+    func setAuthToken(query: String) {
+        fetchAccessTokenWithPath("oauth/access_token", method: "POST", requestToken: BDBOAuthToken(queryString: query), success: { (token: BDBOAuthToken!) -> Void in
+            println("got token")
+            self.requestSerializer.saveAccessToken(token)
+        }) { (error: NSError!) -> Void in
+                print("error - get set auth token: \(error)")
+        }
+    }
+    
+    func getCurrentUser() {
+        GET("1.1/account/verify_credentials.json", parameters: nil, success: { (session: NSURLSessionDataTask!, response: AnyObject!) -> Void in
+            println(response)
+        }) { (session: NSURLSessionDataTask!, error: NSError!) -> Void in
+            print("error - get current user: \(error)")
+        }
+    }
+
+    class var sharedInstance: TwitterClient {
+        struct Static {
+            static let instance = TwitterClient(baseURL: NSURL(string: host), consumerKey: key, consumerSecret: secret)
+        }
+        
+        return Static.instance
+    }
+}
