@@ -10,6 +10,9 @@ import UIKit
 
 class ComposeViewController: UIViewController {
 
+    @IBOutlet weak var status: UITextView!
+    var completion: ((tweet: Tweet?) -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,5 +34,27 @@ class ComposeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    
+    @IBAction func onCancel(sender: AnyObject) {
+        self.closeAndCallback(nil)
+    }
+    
+    @IBAction func onTweet(sender: AnyObject) {
+        TwitterClient.sharedInstance.postTweet(status.text, completion: { (data) -> Void in
+            self.closeAndCallback(data)
+        })
+    }
+    
+    //will return a nil repository if modal was canceled
+    func forTweet(initialStatus: String?, completion: ((tweet: Tweet?) -> Void)) {
+        self.completion = completion
+    }
+    
+    func closeAndCallback(tweet: Tweet?) {
+        dismissViewControllerAnimated(true, { })
+        if let c = completion {
+            c(tweet: tweet)
+        }
+    }
 }

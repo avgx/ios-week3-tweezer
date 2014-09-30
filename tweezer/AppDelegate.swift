@@ -47,8 +47,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String, annotation: AnyObject?) -> Bool {
         
         //fetch access token
-        TwitterClient.sharedInstance.setAuthToken(url.query!)
-        self.window?.rootViewController?.performSegueWithIdentifier("SegueToTabBarController", sender: nil)
+        TwitterClient.sharedInstance.setAuthToken(url.query!, completion: {
+            self.window?.rootViewController?.performSegueWithIdentifier("SegueToTabBarController", sender: nil)
+            return
+        })
+        
         return true
     }
 

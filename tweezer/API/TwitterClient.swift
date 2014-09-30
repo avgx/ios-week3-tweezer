@@ -32,12 +32,12 @@ class TwitterClient : BDBOAuth1SessionManager {
         }
     }
     
-    func setAuthToken(query: String) {
+    func setAuthToken(query: String, completion: () -> Void) {
         fetchAccessTokenWithPath("oauth/access_token", method: "POST", requestToken: BDBOAuthToken(queryString: query), success: { (token: BDBOAuthToken!) -> Void in
-            println("got token")
+            completion()
             self.requestSerializer.saveAccessToken(token)
         }) { (error: NSError!) -> Void in
-                print("error - get set auth token: \(error)")
+                print("error - set auth token: \(error)")
         }
     }
     
@@ -53,8 +53,23 @@ class TwitterClient : BDBOAuth1SessionManager {
         GET("1.1/statuses/home_timeline.json", parameters: nil, success: { (session: NSURLSessionDataTask!, response: AnyObject!) -> Void in
             completion(data:Tweet.tweetsFromArray(response as [NSDictionary]))
         }) { (session: NSURLSessionDataTask!, error: NSError!) -> Void in
-            print("error - get home timeline: \(error)")
+            var errorData = error.userInfo!["com.alamofire.serialization.response.error.data"] as NSData
+            var json = NSJSONSerialization.JSONObjectWithData(errorData, options: nil, error: nil)!
+            println(json)
         }
+    }
+    
+    func postTweet(status: String, completion: (data: Tweet) -> Void) {
+        POST("1.1/statuses/update.json", parameters: ["status", status], success: { (session: NSURLSessionDataTask!, response: AnyObject!) -> Void in
+            completion(data: Tweet(dictionary: response as NSDictionary))
+        }) { (session: NSURLSessionDataTask!, error: NSError!) -> Void in
+            print("error - post tweet: \(error)")
+        }
+    }
+    
+    func logout() {
+        
+        self.requestSerializer.removeAccessToken()
     }
 
     class var sharedInstance: TwitterClient {

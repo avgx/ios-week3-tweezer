@@ -10,11 +10,20 @@ import UIKit
 
 class TimelineCell: UITableViewCell {
 
+    @IBOutlet weak var thumb: UIImageView!
+    @IBOutlet weak var fullname: UILabel!
+    @IBOutlet weak var username: UILabel!
     @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var retweeted: UILabel!
+    @IBOutlet weak var retweetedIcon: UIImageView!
+    @IBOutlet weak var elapsed: UILabel!
+    @IBOutlet weak var retweetIconHeightContstraint: NSLayoutConstraint!
+    @IBOutlet weak var retweetedHeightConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        thumb.layer.cornerRadius = thumb.frame.size.width / 2;
+        thumb.clipsToBounds = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -25,6 +34,11 @@ class TimelineCell: UITableViewCell {
     
     func forTweet(tweet: Tweet) {
         status.text = tweet.text
+        fullname.text = tweet.name
+        username.text = tweet.username
+        thumb.setImageWithURL(NSURL(string: tweet.profileImageUrl!))
+        retweetIconHeightContstraint.constant = 0
+        retweetedHeightConstraint.constant = 0
     }
 
 }
