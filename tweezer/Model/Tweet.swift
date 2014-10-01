@@ -9,19 +9,32 @@
 import Foundation
 
 class Tweet {
+    var id: Int
     var text: String?
-    var name: String?
-    var username: String?
-    var profileImageUrl: String?
+    var user: User!
+    var favoriteCount: Int
+    var retweetCount: Int
+    var isRetweet: Bool
+    var retweetMessage: String?
     
     init(dictionary: NSDictionary) {
         println(dictionary)
+        id = dictionary["id"] as Int
+        if let retweetStatus = dictionary["retweeted_status"] as? NSDictionary {
+            isRetweet = true
+            var userHash = retweetStatus["user"] as NSDictionary
+            var retweetUser = userHash["screen_name"]! as String
+            retweetMessage = "Retweeted by @\(retweetUser)"
+        } else {
+            isRetweet = false
+        }
+        
         text = dictionary["text"] as? String
-        var user = dictionary["user"] as NSDictionary
-        name = user["name"] as? String
-        username = user["screen_name"] as? String
-        profileImageUrl = user["profile_image_url"] as? String
-        println(username)
+        favoriteCount = dictionary["favorite_count"] as Int
+        retweetCount = dictionary["retweet_count"] as Int
+        if let user = dictionary["user"] as? NSDictionary {
+            self.user = User(dictionary: user)
+        }
     }
     
     class func tweetsFromArray(array: [NSDictionary]) -> [Tweet] {

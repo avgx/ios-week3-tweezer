@@ -29,6 +29,7 @@ class TimelineViewController: UITableViewController {
     }
     
     func refreshData(sender: AnyObject) {
+        tweets.removeAll(keepCapacity: false)
         TwitterClient.sharedInstance.getTimeline({ (data: [Tweet]) in
             self.tweets += data
             self.tableView.reloadData()
@@ -73,6 +74,13 @@ class TimelineViewController: UITableViewController {
                 
                 self.tableView.reloadData()
             })
+        } else if segue.identifier == "Details" {
+            
+            let vc = segue.destinationViewController as DetailsViewController
+            if let indexPath = tableView.indexPathForSelectedRow() {
+                vc.forTweet(tweets[indexPath.row])
+                tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            }
         }
     }
 

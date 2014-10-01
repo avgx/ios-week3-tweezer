@@ -12,11 +12,14 @@ class ComposeViewController: UIViewController {
 
     @IBOutlet weak var status: UITextView!
     var completion: ((tweet: Tweet?) -> Void)?
+    var tweet: Tweet?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if tweet != nil {
+            status.text = tweet!.user.username
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,8 +50,9 @@ class ComposeViewController: UIViewController {
     }
     
     //will return a nil repository if modal was canceled
-    func forTweet(initialStatus: String?, completion: ((tweet: Tweet?) -> Void)) {
+    func forTweet(tweet: Tweet?, completion: ((tweet: Tweet?) -> Void)) {
         self.completion = completion
+        self.tweet = tweet
     }
     
     func closeAndCallback(tweet: Tweet?) {

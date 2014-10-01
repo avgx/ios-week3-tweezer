@@ -34,11 +34,12 @@ class TimelineCell: UITableViewCell {
     
     func forTweet(tweet: Tweet) {
         status.text = tweet.text
-        fullname.text = tweet.name
-        username.text = tweet.username
-        thumb.setImageWithURL(NSURL(string: tweet.profileImageUrl!))
-        retweetIconHeightContstraint.constant = 0
-        retweetedHeightConstraint.constant = 0
+        fullname.text = tweet.user.name
+        username.text = tweet.user.username
+        thumb.setImageWithURL(NSURL(string: tweet.user.profileImageUrl))
+        retweetIconHeightContstraint.constant = tweet.isRetweet ? retweetIconHeightContstraint.constant : 0
+        retweetedHeightConstraint.constant = tweet.isRetweet ? retweetedHeightConstraint.constant : 0
+        retweeted.text = tweet.retweetMessage
     }
 
 }
