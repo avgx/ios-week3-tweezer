@@ -1,5 +1,10 @@
 # Tweezer
 
+Time to completion: 13 hours.
+
+
+<img src="https://github.com/sjmueller/ios-week3-tweezer/blob/master/ios-week3-tweezer.gif">
+
 ### Requirements
 - [x] User can sign in using OAuth login flow
 - [x] User can view last 20 tweets from their home timeline
