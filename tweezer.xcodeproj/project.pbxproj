@@ -20,6 +20,7 @@
 		7DB0C47D19D9DE33009FB27C /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB0C47C19D9DE33009FB27C /* TwitterClient.swift */; };
 		7DB0C48119DA36B6009FB27C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB0C48019DA36B6009FB27C /* LoginViewController.swift */; };
 		7DCC2FE619DB71A30083DD22 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC2FE519DB71A30083DD22 /* DetailsViewController.swift */; };
+		7DCC2FE819DB8E410083DD22 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC2FE719DB8E410083DD22 /* MeViewController.swift */; };
 		A9722D89770C4E42ACA0A1C7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B39C859351254739B207A8AA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		7DB0C47C19D9DE33009FB27C /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterClient.swift; path = API/TwitterClient.swift; sourceTree = "<group>"; };
 		7DB0C48019DA36B6009FB27C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = UI/Login/LoginViewController.swift; sourceTree = "<group>"; };
 		7DCC2FE519DB71A30083DD22 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailsViewController.swift; path = UI/Details/DetailsViewController.swift; sourceTree = "<group>"; };
+		7DCC2FE719DB8E410083DD22 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeViewController.swift; path = UI/Timeline/MeViewController.swift; sourceTree = "<group>"; };
 		9A4789773078427EBB71387B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		B39C859351254739B207A8AA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -97,6 +99,7 @@
 			children = (
 				22E4AD6219DA680A00BF7A62 /* TimelineViewController.swift */,
 				2222470619DA985D006E77B5 /* TimelineCell.swift */,
+				7DCC2FE719DB8E410083DD22 /* MeViewController.swift */,
 			);
 			name = Timeline;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DCC2FE819DB8E410083DD22 /* MeViewController.swift in Sources */,
 				2222470019DA8102006E77B5 /* ComposeViewController.swift in Sources */,
 				7DB0C48119DA36B6009FB27C /* LoginViewController.swift in Sources */,
 				7DCC2FE619DB71A30083DD22 /* DetailsViewController.swift in Sources */,

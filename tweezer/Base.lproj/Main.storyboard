@@ -216,7 +216,7 @@
         <!--My Tweets-->
         <scene sceneID="Lxq-Lh-U30">
             <objects>
-                <tableViewController id="pQ1-NO-Mbk" sceneMemberID="viewController">
+                <tableViewController id="pQ1-NO-Mbk" customClass="MeViewController" customModule="tweezer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3GD-GT-Gvf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,9 +235,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Tweets" id="PA4-xd-bde">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QIt-Pw-sFe">
+                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="tjM-yj-e0b"/>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="QIt-Pw-sFe">
                             <connections>
-                                <segue destination="eVd-ZN-Uf2" kind="presentation" id="o7F-qi-8t5"/>
+                                <action selector="onLogout:" destination="pQ1-NO-Mbk" id="DoS-YD-C25"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
